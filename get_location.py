@@ -1,18 +1,4 @@
-import pandas as pd
-import tweepy
-import time as tm
-from tweepy import Stream
-from tweepy import OAuthHandler
-from tweepy.streaming import StreamListener
-import csv
-from geopy.geocoders import Nominatim
-from geopy.exc import GeocoderTimedOut
-from collections import defaultdict
-from datetime import datetime
-from notify_run import Notify
-
 notify = Notify()
-
 text_file = open("Location Errors.txt",'w+')
 geolocator = Nominatim(user_agent="my-application")
 tweets_info = {"Greek_only_tweets" : 0,"empty_tweets" : 0 ,"accurate_tweets" :0,"error_tweets":0 }
